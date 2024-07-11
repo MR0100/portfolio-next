@@ -1,3 +1,4 @@
+import { Epilogue } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -7,12 +8,18 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+    colors: {
+      transparent: "transparent",
+      black: "#2D2D2D",
+      white: "#ffffff",
+      green: "#009379",
+      red: "#FF6250",
+      pink: "#F3AFA8",
+      grey: "#F3F3F3",
+      yellow: "#F7D684",
+    },
+    fontFamily: {
+      epilogue: ["Epilogue", "sans-serif"],
     },
   },
   plugins: [],
