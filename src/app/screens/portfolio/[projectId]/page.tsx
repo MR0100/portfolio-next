@@ -118,7 +118,7 @@ export default function PortfolioDetailsScreen({
           height={2380}
           className={"h-[700px] w-screen object-contain " + project.background}
         />
-        <div className="w-[1200px] flex flex-col items-start p-[42px]">
+        <div className=" flex flex-col items-start p-[42px]">
           <p>{project.background}</p>
           <p className="font-semibold text-[42px]">{project.projectName}</p>
           <p className="text-[17px] opacity-50">{project.projectDetails}</p>

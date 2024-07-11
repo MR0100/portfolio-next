@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function MainSection() {
   return (
-    <div className="w-screen flex place-content-center h-[444px] p-[42px] ">
-      <div className="flex flex-row w-[1200px] items-center">
+    <div className="flex h-[444px] p-[42px] w-full items-center justify-center">
+      <div className="flex flex-row  items-center">
         <div className="lg:basis-3/5 flex flex-col gap-[48px]">
           <div className="flex flex-col gap-[12px]">
             <p className="font-semibold text-[14px] lg:text-[20px]">
@@ -13,8 +13,8 @@ export default function MainSection() {
               Mitul Vaghasiya
             </p>
             <p className="text-[17px]">
-              I'm <b>"Top-Rated Plus"</b> Ranked Developer on Upwork with
-              <b> 5+ years</b> of hand's on Experience developing mobile and web
+              I&apos;m <b>&quot;Top-Rated Plus&quot;</b> Ranked Developer on Upwork with
+              <b> 5+ years</b> of hand&apos;s on Experience developing mobile and web
               applications for many clients and companies.
             </p>
           </div>

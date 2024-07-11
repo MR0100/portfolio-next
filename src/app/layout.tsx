@@ -3,6 +3,9 @@ import { Epilogue } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
 
+import 'swiper/css';
+import "swiper/css/pagination";
+
 const epilogue = Epilogue({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

@@ -4,10 +4,10 @@ import { IoCallOutline } from "react-icons/io5";
 
 export default function ContactSection() {
   return (
-    <div className="w-screen flex place-content-center p-[42px]">
-      <div className="flex flex-col gap-[42px] w-[1200px]">
+    <div className="flex place-content-center p-[42px]">
+      <div className="flex flex-col gap-[42px] ">
         <p className="font-semibold text-[32px] text-center md:text-start lg:text-start ">
-          Let's work together
+          Let&apos;s work together
         </p>
         <div className="grid grid-flow-row  grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-start gap-[48px]">
           <div className="w-auto flex flex-col gap-[60px] ">

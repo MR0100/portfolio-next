@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function CategorySection() {
   return (
-    <div className="w-screen flex place-content-center p-[42px]">
-      <div className="flex flex-col gap-[42px] w-[1200px] items-center">
+    <div className="flex place-content-center p-[42px]">
+      <div className="flex flex-col gap-[42px]  items-center">
         <p className="font-semibold text-[32px]">Services</p>
         <div className="grid grid-flow-row grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-[24px]">
           <CategoryCard

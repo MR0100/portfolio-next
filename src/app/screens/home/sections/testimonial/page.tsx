@@ -1,7 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import TestimonialComponent from "./testimonial_component";
+
+import {  Autoplay, Pagination } from "swiper/modules";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+
+
 
 export default function TestimonialSection() {
   let data = [
@@ -43,16 +49,27 @@ export default function TestimonialSection() {
   ];
 
   return (
-    <div className="w-screen flex place-content-center p-[42px]">
-      <div className="flex flex-col gap-[42px] w-[1200px] items-center">
-        <p className="font-semibold text-[32px]">Testimonial</p>
-
-        <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px]">
-          {data.map((item) => (
+    <div className="flex p-[42px] flex-col gap-[42px] w-full items-center">
+      <p className="font-semibold text-[32px]">Testimonial</p>
+      <Swiper
+        navigation={true}
+        modules={[ Autoplay, Pagination]}
+        autoplay={{ delay: 2000 }}
+        pagination={{
+          clickable: true
+        }}
+        spaceBetween={50}
+        slidesPerView={1}
+        className="w-full"
+      >
+        {data.map((item, index) => (
+          <SwiperSlide key={index}>
             <TestimonialComponent data={item} />
-          ))}
-        </div>
-      </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+  
     </div>
   );
 }

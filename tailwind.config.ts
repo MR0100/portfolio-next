@@ -1,11 +1,17 @@
 import { Epilogue } from "next/font/google";
 import type { Config } from "tailwindcss";
+import { addDynamicIconSelectors } from "@iconify/tailwind";
+
+
+
+
 
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/*.html',
   ],
   theme: {
     colors: {
@@ -21,7 +27,17 @@ const config: Config = {
     fontFamily: {
       epilogue: ["Epilogue", "sans-serif"],
     },
+    container: {
+      screens: {
+        sm: "100%",
+        md: "100%",
+        lg: "1024px",
+        xl: "1280px",
+      }
+    }
   },
-  plugins: [],
+  plugins: [
+    addDynamicIconSelectors(),
+  ],
 };
 export default config;

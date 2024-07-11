@@ -87,12 +87,12 @@ export default function WorkSection() {
   ];
 
   return (
-    <div className="w-screen flex place-content-center p-[42px]">
-      <div className="w-[1200px] flex flex-col gap-[42px] items-center">
+    <div className="flex place-content-center p-[42px]">
+      <div className=" flex flex-col gap-[42px] items-center">
         <p className="font-semibold text-[32px]">Recent Projects</p>
         <div className="grid grid-flow-row lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[24px]">
-          {data.map((item) => (
-            <WorkCardComponent data={item} />
+          {data.map((item, index) => (
+            <WorkCardComponent data={item} key={index}/>
           ))}
         </div>
       </div>
