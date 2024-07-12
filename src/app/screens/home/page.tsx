@@ -7,14 +7,12 @@ import WorkSection from "./sections/work/page";
 
 export default function HomeScreen() {
   return (
-
     <div className="container m-auto">
       <MainSection />
       <WorkSection />
       <CategorySection />
       <TestimonialSection />
-      <ContactSection />
+      <ContactSection padding={true} />
     </div>
-
   );
 }

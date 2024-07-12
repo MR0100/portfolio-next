@@ -73,7 +73,7 @@ export default function WorkSection() {
       projectId: "synergy",
     },
     {
-      image: "/portfolio/tarot_cat/01.jpg",
+      image: "/portfolio/tarot_cat/01.png",
       projectName: "Tarot Cat",
       projectDetails: "Tarot Reading and Astrology Application",
       projectId: "tarot_cat",
@@ -92,7 +92,7 @@ export default function WorkSection() {
         <p className="font-semibold text-[32px]">Recent Projects</p>
         <div className="grid grid-flow-row lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[24px]">
           {data.map((item, index) => (
-            <WorkCardComponent data={item} key={index}/>
+            <WorkCardComponent data={item} key={index} />
           ))}
         </div>
       </div>
