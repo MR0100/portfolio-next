@@ -1,6 +1,7 @@
+"use client";
+
 import PageAnimationWrapper from "@/app/components/page_animation_wrapper";
-import { group } from "console";
-import { title } from "process";
+import { useEffect, useState } from "react";
 
 export default function SkillScreen() {
   let skills = [
@@ -371,34 +372,64 @@ export default function SkillScreen() {
   skills = skills.sort((a, b) => {
     return a.group.localeCompare(b.group);
   });
+  
+
+
+  var [searchSkills, setSearchSkills] = useState(skills);
+
   var groups: Array<string> = [];
-  skills.forEach((skill) => {
+  searchSkills.forEach((skill) => {
     if (!groups.includes(skill.group)) {
       groups.push(skill.group);
     }
   });
 
   return (
-    <PageAnimationWrapper
-      children={
+    <PageAnimationWrapper>
+    {
         <div className="container m-auto p-[42px]">
           <div className="flex flex-col gap-[24px]">
-            <p className="text-[32px] font-semibold">Skills</p>
+            <div className="flex justify-between">
+              <p className="text-[32px] font-semibold">Skills</p>
+              <input
+                type="text"
+                placeholder="Search Skills"
+                className="p-2 w-[300px] rounded-lg border border-gray-300 opacity-0 md:opacity-100 lg:opacity-100"
+                onChange={(e) => {
+                  var search = e.target.value;
+                  var newSkills = skills.filter((skill) => {
+                    return skill.title.toLowerCase().includes(search.toLowerCase()) || skill.skills.toLowerCase().includes(search.toLowerCase()) || skill.group.toLowerCase().includes(search.toLowerCase());
+                  });
+                  setSearchSkills(newSkills);
+                }}/>
+            </div>
             <p className="text-[17px]">
               I have mastered many skills while working on new ideas from
               different clients and also learning modern technologies to improve
               my qualities of work.
             </p>
+             <input
+                type="text"
+                placeholder="Search Skills"
+                className="p-2 w-full rounded-lg border border-gray-300 opacity-100 md:opacity-0 lg:opacity-0"
+                onChange={(e) => {
+                  var search = e.target.value;
+                  var newSkills = skills.filter((skill) => {
+                    return skill.title.toLowerCase().includes(search.toLowerCase()) || skill.skills.toLowerCase().includes(search.toLowerCase()) || skill.group.toLowerCase().includes(search.toLowerCase());
+                  });
+                  setSearchSkills(newSkills);
+              }}
+            />
             <div className="flex flex-col gap-[24px]">
               {groups.map((group, index) => {
                 return (
                   <div key={index} className="flex flex-col gap-[24px]">
                     <p className="text-[24px] font-semibold">{group}</p>
                     <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
-                      {skills.map((skill, index) => {
+                      {searchSkills.map((skill, index) => {
                         if (skill.group === group) {
                           return (
-                            <div className={"group"}>
+                            <div className={"group"} key={index}>
                               <div
                                 className={
                                   "flex flex-col md:flex-row lg:flex-row p-4 gap-4 items-center md:items-start lg:items-start " +
@@ -442,7 +473,6 @@ export default function SkillScreen() {
             </div>
           </div>
         </div>
-      }
-    />
+      }</PageAnimationWrapper>
   );
 }
