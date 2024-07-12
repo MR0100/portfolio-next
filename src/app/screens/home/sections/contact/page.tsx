@@ -2,14 +2,9 @@ import { GoLocation } from "react-icons/go";
 import { HiOutlineMail } from "react-icons/hi";
 import { IoCallOutline } from "react-icons/io5";
 
-export default function ContactSection({ padding }: { padding: boolean }) {
-  if (padding === undefined) padding = true;
+export default function ContactSection() {
   return (
-    <div
-      className={
-        "flex place-content-center " + (padding === true ? "p-[42px]" : "")
-      }
-    >
+    <div className={"flex place-content-center bg-[black] text-white p-[42px]"}>
       <div className="flex flex-col gap-[42px] ">
         <p className="font-semibold text-[32px] text-center md:text-start lg:text-start ">
           Let&apos;s work together
@@ -27,8 +22,8 @@ export default function ContactSection({ padding }: { padding: boolean }) {
           </div>
           <div className="w-auto text-[17px] flex flex-col gap-5">
             <div className="flex gap-[16px] group items-center">
-              <div className="rounded-full p-4 group-hover:bg-black bg-grey ">
-                <GoLocation className="h-auto w-[24px] group-hover:text-white" />
+              <div className="rounded-full p-4 bg-black group-hover:bg-grey ">
+                <GoLocation className="h-auto w-[24px]  group-hover:text-black" />
               </div>
               <div className="">
                 <p className="font-semibold text-[24px]">Location</p>
@@ -38,8 +33,8 @@ export default function ContactSection({ padding }: { padding: boolean }) {
               </div>
             </div>
             <div className="flex gap-[16px] group items-center">
-              <div className="rounded-full p-4 group-hover:bg-black bg-grey ">
-                <HiOutlineMail className="h-auto w-[24px] group-hover:text-white" />
+              <div className="rounded-full p-4 bg-black group-hover:bg-grey ">
+                <HiOutlineMail className="h-auto w-[24px]  group-hover:text-black" />
               </div>
               <div className="">
                 <p className="font-semibold text-[24px]">Email</p>
@@ -49,8 +44,8 @@ export default function ContactSection({ padding }: { padding: boolean }) {
               </div>
             </div>
             <div className="flex gap-[16px] group items-center">
-              <div className="rounded-full p-4 group-hover:bg-black bg-grey ">
-                <IoCallOutline className="h-auto w-[24px] group-hover:text-white" />
+              <div className="rounded-full p-4 bg-black group-hover:bg-grey ">
+                <IoCallOutline className="h-auto w-[24px]  group-hover:text-black" />
               </div>
               <div className="">
                 <p className="font-semibold text-[24px]">Call</p>

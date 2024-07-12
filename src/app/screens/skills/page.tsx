@@ -372,8 +372,6 @@ export default function SkillScreen() {
   skills = skills.sort((a, b) => {
     return a.group.localeCompare(b.group);
   });
-  
-
 
   var [searchSkills, setSearchSkills] = useState(skills);
 
@@ -386,40 +384,65 @@ export default function SkillScreen() {
 
   return (
     <PageAnimationWrapper>
-    {
+      {
         <div className="container m-auto p-[42px]">
           <div className="flex flex-col gap-[24px]">
             <div className="flex justify-between">
               <p className="text-[32px] font-semibold">Skills</p>
-              <input
-                type="text"
-                placeholder="Search Skills"
-                className="p-2 w-[300px] rounded-lg border border-gray-300 opacity-0 md:opacity-100 lg:opacity-100"
-                onChange={(e) => {
-                  var search = e.target.value;
-                  var newSkills = skills.filter((skill) => {
-                    return skill.title.toLowerCase().includes(search.toLowerCase()) || skill.skills.toLowerCase().includes(search.toLowerCase()) || skill.group.toLowerCase().includes(search.toLowerCase());
-                  });
-                  setSearchSkills(newSkills);
-                }}/>
+              <div className="p-2 w-[300px] rounded-lg border border-gray-300 opacity-0 md:opacity-100 lg:opacity-100 flex gap-2 items-center">
+                <span className="icon-[feather--search] w-[24px] h-[24px] text-[17px] opacity-50" />
+                <input
+                  type="text"
+                  placeholder="Search Skills"
+                  className="w-full h-full "
+                  style={{ outline: "none" }}
+                  onChange={(e) => {
+                    var search = e.target.value;
+                    var newSkills = skills.filter((skill) => {
+                      return (
+                        skill.title
+                          .toLowerCase()
+                          .includes(search.toLowerCase()) ||
+                        skill.skills
+                          .toLowerCase()
+                          .includes(search.toLowerCase()) ||
+                        skill.group.toLowerCase().includes(search.toLowerCase())
+                      );
+                    });
+                    setSearchSkills(newSkills);
+                  }}
+                />
+              </div>
             </div>
-            <p className="text-[17px]">
+            <p className="text-[17px] w-full md:w-[60%] lg:w-[60%]">
               I have mastered many skills while working on new ideas from
               different clients and also learning modern technologies to improve
               my qualities of work.
             </p>
-             <input
+            <div className="p-2 w-full rounded-lg border border-gray-300 opacity-100 md:opacity-0 lg:opacity-0 flex gap-2 items-center">
+              <span className="icon-[feather--search] w-[24px] h-[24px] text-[17px] opacity-50" />
+              <input
                 type="text"
                 placeholder="Search Skills"
-                className="p-2 w-full rounded-lg border border-gray-300 opacity-100 md:opacity-0 lg:opacity-0"
+                className="w-full h-full "
+                style={{ outline: "none" }}
                 onChange={(e) => {
                   var search = e.target.value;
                   var newSkills = skills.filter((skill) => {
-                    return skill.title.toLowerCase().includes(search.toLowerCase()) || skill.skills.toLowerCase().includes(search.toLowerCase()) || skill.group.toLowerCase().includes(search.toLowerCase());
+                    return (
+                      skill.title
+                        .toLowerCase()
+                        .includes(search.toLowerCase()) ||
+                      skill.skills
+                        .toLowerCase()
+                        .includes(search.toLowerCase()) ||
+                      skill.group.toLowerCase().includes(search.toLowerCase())
+                    );
                   });
                   setSearchSkills(newSkills);
-              }}
-            />
+                }}
+              />
+            </div>
             <div className="flex flex-col gap-[24px]">
               {groups.map((group, index) => {
                 return (
@@ -473,6 +496,7 @@ export default function SkillScreen() {
             </div>
           </div>
         </div>
-      }</PageAnimationWrapper>
+      }
+    </PageAnimationWrapper>
   );
 }

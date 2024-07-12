@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CategorySection() {
   return (
-    <div className="flex place-content-center p-[42px]">
+    <div className="flex place-content-center bg-grey p-[42px]">
       <div className="flex flex-col gap-[42px]  items-center">
         <p className="font-semibold text-[32px]">Services</p>
         <div className="grid grid-flow-row grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-[24px]">
@@ -37,7 +37,7 @@ function CategoryCard({
   description: string;
 }) {
   return (
-    <div className="w-auto flex flex-col py-[64px] items-center">
+    <div className="w-auto  flex flex-col py-[64px] items-center">
       <Image
         src={image}
         alt=""

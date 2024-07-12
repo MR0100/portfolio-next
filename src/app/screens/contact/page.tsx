@@ -6,7 +6,7 @@ export default function ContactScreen() {
   return (
     <PageAnimationWrapper
       children={
-        <div className="container m-auto p-[42px]">
+        <div className="container m-auto px-[42px] pt-[42px]">
           <div className="flex flex-col gap-[24px]">
             <div className="flex lg:flex-row flex-col-reverse items-center">
               <div className="lg:basis-3/5 flex flex-col gap-[48px]">
@@ -68,7 +68,7 @@ export default function ContactScreen() {
                 image="/images/03.png"
               />
             </div>
-            <ContactSection padding={false} />
+            <ContactSection />
           </div>
         </div>
       }

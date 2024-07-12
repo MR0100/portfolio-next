@@ -12,7 +12,7 @@ export default function HomeScreen() {
       <WorkSection />
       <CategorySection />
       <TestimonialSection />
-      <ContactSection padding={true} />
+      <ContactSection />
     </div>
   );
 }
