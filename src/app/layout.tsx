@@ -3,8 +3,10 @@ import { Epilogue } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
 
-import 'swiper/css';
+import "swiper/css";
 import "swiper/css/pagination";
+
+import { motion, AnimatePresence } from "framer-motion";
 
 const epilogue = Epilogue({ subsets: ["latin"] });
 

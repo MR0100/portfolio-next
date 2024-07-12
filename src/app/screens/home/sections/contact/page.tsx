@@ -2,9 +2,14 @@ import { GoLocation } from "react-icons/go";
 import { HiOutlineMail } from "react-icons/hi";
 import { IoCallOutline } from "react-icons/io5";
 
-export default function ContactSection() {
+export default function ContactSection({ padding }: { padding: boolean }) {
+  if (padding === undefined) padding = true;
   return (
-    <div className="flex place-content-center p-[42px]">
+    <div
+      className={
+        "flex place-content-center " + (padding === true ? "p-[42px]" : "")
+      }
+    >
       <div className="flex flex-col gap-[42px] ">
         <p className="font-semibold text-[32px] text-center md:text-start lg:text-start ">
           Let&apos;s work together

@@ -12,6 +12,9 @@ export default function Header() {
               <a href="/screens/portfolio/">Portfolio</a>
             </li>
             <li>
+              <a href="/screens/skills/">Skills</a>
+            </li>
+            <li>
               <a href="/screens/contact/">Contact</a>
             </li>
           </ul>

@@ -24,12 +24,8 @@ export default function TestimonialComponent({
       <div className="flex">
         <div className="min-w-[24px] min-h-[24px] icon-[vaadin--quote-left]  bg-green opacity-50"></div>
         <p className="text-[17px] text-center">{data.testimonial}</p>
-        <div className="min-w-[24px] min-h-[24px] icon-[vaadin--quote-right]  bg-green opacity-50"></div>
-        {/* <div className="icon-[vaadin--quote-right] w-[24px] h-[24px]"></div> */}
-
+        <div className="min-w-[24px] min-h-[24px] icon-[vaadin--quote-right]  text-green opacity-50"></div>
       </div>
-    
-
     </div>
   );
 }

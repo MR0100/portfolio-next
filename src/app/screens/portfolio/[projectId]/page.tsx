@@ -1,3 +1,4 @@
+import PageAnimationWrapper from "@/app/components/page_animation_wrapper";
 import Image from "next/image";
 import { TbBackground } from "react-icons/tb";
 
@@ -109,21 +110,27 @@ export default function PortfolioDetailsScreen({
     return <div>Project not found</div>;
   }
   return (
-    <div className="w-screen flex place-content-center">
-      <div className="flex flex-col items-center">
-        <Image
-          src={project.image}
-          alt={project.projectName}
-          width={3368}
-          height={2380}
-          className={"h-[700px] w-screen object-contain " + project.background}
-        />
-        <div className=" flex flex-col items-start p-[42px]">
-          <p>{project.background}</p>
-          <p className="font-semibold text-[42px]">{project.projectName}</p>
-          <p className="text-[17px] opacity-50">{project.projectDetails}</p>
+    <PageAnimationWrapper
+      children={
+        <div className="w-screen flex place-content-center">
+          <div className="flex flex-col items-center">
+            <Image
+              src={project.image}
+              alt={project.projectName}
+              width={3368}
+              height={2380}
+              className={
+                "h-[700px] w-screen object-contain " + project.background
+              }
+            />
+            <div className=" flex flex-col items-start p-[42px]">
+              <p>{project.background}</p>
+              <p className="font-semibold text-[42px]">{project.projectName}</p>
+              <p className="text-[17px] opacity-50">{project.projectDetails}</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      }
+    />
   );
 }
