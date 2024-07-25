@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Header() {
   return (
     <div className="w-screen h-[78px] flex place-content-center">
@@ -6,16 +8,16 @@ export default function Header() {
         <nav>
           <ul className="flex gap-4 text-[17px]">
             <li>
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <a href="/screens/portfolio/">Portfolio</a>
+              <Link href="/portfolio/">Portfolio</Link>
             </li>
             <li>
-              <a href="/screens/skills/">Skills</a>
+              <Link href="/skills/">Skills</Link>
             </li>
             <li>
-              <a href="/screens/contact/">Contact</a>
+              <Link href="/contact/">Contact</Link>
             </li>
           </ul>
         </nav>
