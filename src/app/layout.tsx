@@ -55,11 +55,11 @@ const degular = localfont({
       style: "italic",
     },
     {
-      path: "../../public/font/Degular/Degular-light.otf",
+      path: "../../public/font/Degular/Degular-Light.otf",
       weight: "200",
     },
     {
-      path: "../../public/font/Degular/Degular-lightItalic.otf",
+      path: "../../public/font/Degular/Degular-LightItalic.otf",
       weight: "200",
       style: "italic",
     },
