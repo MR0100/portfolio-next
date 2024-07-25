@@ -3,12 +3,11 @@ import WorkSection from "../home/sections/work/page";
 
 export default function PortfolioScreen() {
   return (
-    <PageAnimationWrapper
-      children={
-        <div className="container m-auto">
-          <WorkSection />
-        </div>
-      }
-    />
+    <PageAnimationWrapper>
+      {" "}
+      <div className="container m-auto">
+        <WorkSection />
+      </div>
+    </PageAnimationWrapper>
   );
 }

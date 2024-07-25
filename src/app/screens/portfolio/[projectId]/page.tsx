@@ -273,84 +273,83 @@ export default function PortfolioDetailsScreen({
     return <div>Project not found</div>;
   }
   return (
-    <PageAnimationWrapper
-      children={
-        <div className="w-screen flex place-content-center">
-          <div className={"flex flex-col items-center w-full "}>
-            <Swiper
-              navigation={true}
-              modules={[Autoplay, Pagination]}
-              autoplay={{ delay: 2000 }}
-              pagination={{
-                clickable: true,
-              }}
-              spaceBetween={50}
-              slidesPerView={1}
-              className={"w-full " + project.background}
-            >
-              {project.images.map((image, index) => (
-                <SwiperSlide key={index}>
-                  <Image
-                    src={project.imagePath + image}
-                    alt={project.projectName}
-                    width={3368}
-                    height={2380}
-                    className={"h-[700px] w-full object-contain "}
+    <PageAnimationWrapper>
+      {" "}
+      <div className="w-screen flex place-content-center">
+        <div className={"flex flex-col items-center w-full "}>
+          <Swiper
+            navigation={true}
+            modules={[Autoplay, Pagination]}
+            autoplay={{ delay: 2000 }}
+            pagination={{
+              clickable: true,
+            }}
+            spaceBetween={50}
+            slidesPerView={1}
+            className={"w-full " + project.background}
+          >
+            {project.images.map((image, index) => (
+              <SwiperSlide key={index}>
+                <Image
+                  src={project.imagePath + image}
+                  alt={project.projectName}
+                  width={3368}
+                  height={2380}
+                  className={"h-[700px] w-full object-contain "}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="container m-auto">
+            <div className="w-full flex flex-col items-start p-[42px] gap-[24px]">
+              <p className="font-semibold text-[42px]">{project.projectName}</p>
+              <div className="flex flex-wrap gap-[12px]">
+                {project.skills.map((skill, index) => {
+                  return (
+                    <p
+                      key={index}
+                      className="text-[17px] bg-grey px-[24px] py-[6px] rounded-full content-center text-black"
+                    >
+                      {skill}
+                    </p>
+                  );
+                })}
+              </div>
+              <p className="text-[17px] opacity-50">{project.projectDetails}</p>
+              <div className="flex gap-4">
+                {project.appStoreLink !== "" && (
+                  <Link
+                    href={project.appStoreLink}
+                    target="_blank"
+                    className="icon-[simple-icons--appstore] h-[32px] w-[32px]"
                   />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            <div className="container m-auto">
-              <div className="w-full flex flex-col items-start p-[42px] gap-[24px]">
-                <p className="font-semibold text-[42px]">
-                  {project.projectName}
-                </p>
-                <div className="flex flex-wrap gap-[12px]">
-                  {project.skills.map((skill, index) => {
-                    return (
-                      <p className="text-[17px] bg-grey px-[24px] py-[6px] rounded-full content-center text-black">
-                        {skill}
-                      </p>
-                    );
-                  })}
-                </div>
-                <p className="text-[17px] opacity-50">
-                  {project.projectDetails}
-                </p>
-                <div className="flex gap-4">
-                  {project.appStoreLink !== "" && (
+                )}
+                {project.playStoreLink !== "" && (
+                  <Link
+                    href={project.playStoreLink}
+                    target="_blank"
+                    className="icon-[ion--logo-google-playstore] h-[32px] w-[32px]"
+                  />
+                )}
+              </div>
+              <div className="flex gap-4 flex-col">
+                {project.otherLinks.map((link, index) => {
+                  return (
                     <Link
-                      href={project.appStoreLink}
+                      key={index}
+                      href={link}
                       target="_blank"
-                      className="icon-[simple-icons--appstore] h-[32px] w-[32px]"
-                    />
-                  )}
-                  {project.playStoreLink !== "" && (
-                    <Link
-                      href={project.playStoreLink}
-                      target="_blank"
-                      className="icon-[ion--logo-google-playstore] h-[32px] w-[32px]"
-                    />
-                  )}
-                </div>
-                <div className="flex gap-4 flex-col">
-                  {project.otherLinks.map((link, index) => {
-                    return (
-                      <Link
-                        href={link}
-                        target="_blank"
-                        className="font-semibold text-[20px] text-[#4a9fff]"
-                      >
-                        //{link}
-                      </Link>
-                    );
-                  })}
-                </div>
+                      className="font-semibold text-[20px] text-[#4a9fff]"
+                    >
+                      {/* {link} */}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
         </div>
-      }
-    />
+      </div>
+    </PageAnimationWrapper>
   );
 }
