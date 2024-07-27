@@ -93,3 +93,7 @@ export default function RootLayout({
     </html>
   );
 }
+
+// Account Holder: VAGHASIYA MITUL RAJUBHAI
+// IFSC: HDFC0009300
+// Bank Name: HDFC Bank

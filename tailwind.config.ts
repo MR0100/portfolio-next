@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import { addDynamicIconSelectors } from "@iconify/tailwind";
+import { transform } from "next/dist/build/swc";
 
 const config: Config = {
   content: [
@@ -29,6 +30,7 @@ const config: Config = {
       },
     },
   },
+
   plugins: [addDynamicIconSelectors()],
 };
 export default config;
