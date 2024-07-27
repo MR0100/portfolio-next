@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <div className="w-screen h-[78px]">
-      <div className="w-screen h-[78px] flex place-content-center fixed backdrop-blur-xl">
+      <div className="w-screen h-[78px] z-50 flex place-content-center fixed backdrop-blur-xl">
         <div className="w-[1500px] px-10 flex justify-between items-center">
           <h1 className="font-semibold text-[20px]">LOGO</h1>
           <nav>

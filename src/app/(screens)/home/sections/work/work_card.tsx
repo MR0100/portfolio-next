@@ -12,7 +12,7 @@ export default function WorkCardComponent({
   };
 }) {
   return (
-    <Link href={"/screens/portfolio/" + data.projectId} className="w-auto ">
+    <Link href={"/portfolio/" + data.projectId} className="w-auto ">
       <Image
         src={data.image}
         width={300}
