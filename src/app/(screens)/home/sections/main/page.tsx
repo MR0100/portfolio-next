@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function MainSection() {
   return (
@@ -19,17 +20,16 @@ export default function MainSection() {
               and web applications for many clients and companies.
             </p>
           </div>
-          <div className="flex gap-1 items-center bg-black self-center lg:self-start w-fit py-[12px] pl-[32px] pr-[24px] lg:py-[12px] ">
-            <a
-              href="/screens/contact/"
-              className="font-semibold text-[20px] text-white"
-            >
-              Contact
-            </a>
+
+          <Link
+            href="/contact/"
+            className="font-semibold text-[20px] text-white flex gap-1 items-center bg-black self-center lg:self-start w-fit py-[12px] pl-[32px] pr-[24px] lg:py-[12px] "
+          >
+            <p>Contact</p>
             <div className=" h-[28px] w-[28px] p-1">
               <span className="icon-[solar--phone-bold] h-full w-full bg-white" />
             </div>
-          </div>
+          </Link>
         </div>
         <div className="basis-2/5 place-content-end flex ">
           <Image
