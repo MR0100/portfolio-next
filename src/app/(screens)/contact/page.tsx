@@ -68,44 +68,17 @@ export default function ContactScreen() {
               image="/images/03.png"
             />
           </div>
-          <div className="w-full ">
-            <Image
-              src="/images/03.png"
-              alt=""
-              width={124}
-              height={124}
-              className="pb-[42px] h-auto w-[200px] -z-50 left-[72vw]  absolute px-[45px] flex-col items-start"
-            />
-            <Image
-              src="/images/03.png"
-              alt=""
-              width={124}
-              height={124}
-              className="pb-[42px] h-auto w-[200px] -z-50 left-[20vw] -bottom-[59%]  absolute px-[45px] flex-col items-start"
-            />
-            <Image
-              src="/images/02.png"
-              alt=""
-              width={124}
-              height={124}
-              className="pb-[42px] h-auto w-[200px] -z-50 left-[19vw] -bottom-[11%] rotate-90 absolute px-[45px] flex-col items-start"
-            />
-            <Image
-              src="/images/02.png"
-              alt=""
-              width={124}
-              height={124}
-              className="pb-[42px] h-auto w-[200px] -z-50 left-[72vw] -bottom-[57%] -rotate-90 absolute px-[45px] flex-col items-start"
-            />
-          </div>
-          <div className="flex w-full z-50 px-[45px] mb-[42px] pb-[42px] backdrop-blur-2xl flex-col items-start">
-            <p className="font-semibold text-[32px] pt-[42px]">Contact</p>
-            <p className="text-[17px]">
-              Please enter the details and send it. I&#39;ll get back to you as
-              sooner as possible.
-            </p>
-            <ContactForm />
-          </div>
+
+          {/* <div className="before:h-[200px] before:w-[200px] before:bg-green before:absolute before:rounded-2xl before:-z-50 after:h-[200px] after:w-[200px]  after:bg-red after:absolute after:rounded-2xl after:-z-50">
+            <div className="flex w-full z-50 px-[45px] mb-[42px] pb-[42px] backdrop-blur-2xl flex-col items-start">
+              <p className="font-semibold text-[32px] pt-[42px]">Contact</p>
+              <p className="text-[17px]">
+                Please enter the details and send it. I&#39;ll get back to you
+                as sooner as possible.
+              </p>
+              <ContactForm />
+            </div>
+          </div> */}
         </div>
         <ContactSection />
       </div>
