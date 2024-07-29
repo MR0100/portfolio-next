@@ -22,9 +22,9 @@ export default function PortfolioDetailsScreen({
       projectDetails: "Daily Quote and Motivation Application",
       projectId: "today_quote",
       background: "bg-[#F4F4F4]",
-      appStoreLink: "a",
-      playStoreLink: "a",
-      otherLinks: ["a", "b"],
+      appStoreLink: "",
+      playStoreLink: "",
+      otherLinks: [],
     },
     {
       imagePath: "/portfolio/careshare/",
