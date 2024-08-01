@@ -6,6 +6,7 @@ import Header from "./components/header";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import "react-toastify/dist/ReactToastify.css";
 
 const degular = localfont({
   src: [

@@ -44,7 +44,7 @@ export default function ContactSection() {
               </div>
             </div>
             <div className="flex gap-[16px] group items-center">
-              <div className="rounded-full p-4 bg-black group-hover:bg-grey ">
+              <div className="rounded-full p-4 bg-black group-hover:bg-grey">
                 <IoCallOutline className="h-auto w-[24px]  group-hover:text-black" />
               </div>
               <div className="">
